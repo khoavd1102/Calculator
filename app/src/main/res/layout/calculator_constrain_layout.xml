@@ -204,7 +204,7 @@
         style="@style/Base.Widget.AppCompat.Button.Gray"
         android:layout_width="408dp"
         android:layout_height="284dp"
-        android:gravity="center||right"
+        android:gravity="center|right"
         android:text="0"
         android:textColor="@color/black"
         android:textSize="70dp"

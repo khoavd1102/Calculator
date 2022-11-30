@@ -10,16 +10,28 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="2">
-        <TextView
+        android:layout_weight="2"
+        android:weightSum="3"
+        android:orientation="vertical">
+<!--        <TextView-->
+<!--            android:layout_weight="2"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:background="@color/gray"-->
+<!--            android:gravity="center|right"-->
+<!--            android:id="@+id/hienThiPhepTinhCu">-->
+<!--        </TextView>-->
+        <EditText
+            android:id="@+id/editText"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_weight="1"
             android:text="0"
             android:textSize="100dp"
             android:textColor="@color/black"
             android:gravity="center|right"
             android:background="@color/gray">
-        </TextView>
+        </EditText>
     </LinearLayout>
 
     <LinearLayout
@@ -39,6 +51,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:text="@string/clearEntry"
+                android:onClick="clearEntryEvent"
                 android:textSize="28dp"
                 android:backgroundTint="@color/gray"
                 android:layout_weight="1"
@@ -48,6 +61,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:text="@string/clear"
+                android:onClick="clearEvent"
                 android:textSize="28dp"
                 android:backgroundTint="@color/gray"
                 android:layout_weight="1"
@@ -66,10 +80,11 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:text="@string/division"
+                android:onClick="operatorEvent"
                 android:textSize="28dp"
                 android:backgroundTint="@color/gray"
                 android:layout_weight="1"
-                android:id="@+id/slash_btn"
+                android:id="@+id/division_btn"
                 />
 
         </LinearLayout>
@@ -84,6 +99,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:text="@string/seven"
+                android:onClick="numberEvent"
                 android:textSize="28dp"
                 android:backgroundTint="@color/white"
                 android:layout_weight="1"
@@ -93,6 +109,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:text="@string/eight"
+                android:onClick="numberEvent"
                 android:textSize="28dp"
                 android:backgroundTint="@color/white"
                 android:layout_weight="1"
@@ -102,21 +119,23 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:text="@string/nine"
+                android:onClick="numberEvent"
                 android:textSize="28dp"
                 android:backgroundTint="@color/white"
                 android:layout_weight="1"
                 android:id="@+id/nine_btn"
                 />
+
             <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/multiplication_btn"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:backgroundTint="@color/gray"
+                android:onClick="operatorEvent"
                 android:text="@string/multiplication"
                 android:textAllCaps="false"
-                android:textSize="28dp"
-                android:backgroundTint="@color/gray"
-                android:layout_weight="1"
-                android:id="@+id/multiplication_btn"
-                />
+                android:textSize="28dp" />
 
         </LinearLayout>
         <LinearLayout
@@ -130,6 +149,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:text="@string/four"
+                android:onClick="numberEvent"
                 android:textSize="28dp"
                 android:backgroundTint="@color/white"
                 android:layout_weight="1"
@@ -139,6 +159,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:text="@string/five"
+                android:onClick="numberEvent"
                 android:textSize="28dp"
                 android:backgroundTint="@color/white"
                 android:layout_weight="1"
@@ -148,6 +169,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:text="@string/six"
+                android:onClick="numberEvent"
                 android:textSize="28dp"
                 android:backgroundTint="@color/white"
                 android:layout_weight="1"
@@ -157,6 +179,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:text="@string/minus"
+                android:onClick="operatorEvent"
                 android:textSize="28dp"
                 android:backgroundTint="@color/gray"
                 android:layout_weight="1"
@@ -175,6 +198,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:text="@string/one"
+                android:onClick="numberEvent"
                 android:textSize="28dp"
                 android:backgroundTint="@color/white"
                 android:layout_weight="1"
@@ -184,6 +208,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:text="@string/two"
+                android:onClick="numberEvent"
                 android:textSize="28dp"
                 android:backgroundTint="@color/white"
                 android:layout_weight="1"
@@ -193,6 +218,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:text="@string/three"
+                android:onClick="numberEvent"
                 android:textSize="28dp"
                 android:backgroundTint="@color/white"
                 android:layout_weight="1"
@@ -202,6 +228,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:text="@string/plus"
+                android:onClick="operatorEvent"
                 android:textSize="28dp"
                 android:backgroundTint="@color/gray"
                 android:layout_weight="1"
@@ -229,6 +256,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:text="@string/zero"
+                android:onClick="numberEvent"
                 android:textSize="28dp"
                 android:backgroundTint="@color/white"
                 android:layout_weight="1"
@@ -247,6 +275,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:text="@string/equals"
+                android:onClick="equalEvent"
                 android:textSize="28dp"
                 android:backgroundTint="@color/gray"
                 android:layout_weight="1"
